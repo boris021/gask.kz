@@ -1,16 +1,73 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Главная"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
-	</body>
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+
+			<section class="main">
+				<div class="main__container">
+					<div class="main__header-top">
+						<div class="header__menu menu">
+							<button type="button" class="menu__icon icon-menu"><span></span></button>
+							<nav class="menu__body">
+								<ul class="menu__list">
+									<li class="menu__item"><a href="" class="menu__link">Главная</a></li>
+									<li class="menu__item"><a href="" class="menu__link">Услуги</a></li>
+									<li class="menu__item"><a href="" class="menu__link">О нас</a></li>
+									<li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="main__header-social">
+							<a class="main__header-social-link" href="https://api.whatsapp.com/send?phone=77764266044"><img
+									src="@img/main/whatsapp.png" alt=""></a>
+							<a class="main__header-social-link" href="tel:+77764266044"><img src="@img/main/telephone.png"
+									alt=""></a></div>
+						<div class="main__header-tel">
+							<a href="tel:+77764266044">+7 776 426 6044</a>
+						</div>
+					</div>
+					<div class="main__header-row">
+						<div class="main__header-row-left">
+							<div class="main__header-title">Узаконение недвижимости и решение земельных вопросов <span>в
+									Алматы</span>
+							</div>
+							<div class="main__header-subtitle">Возьмем на себя Ваши заботы и решим их в срок!</div>
+							<div class="main__header-list">
+								<div class="main__header-list-item">
+									<img src="@img/main/icons/main-icon-1.png" alt="">
+									<span>Полное сопровождение на всех этапах</span>
+								</div>
+								<div class="main__header-list-item">
+									<img src="@img/main/icons/main-icon-2.png" alt="">
+									<span>Приоритет качества и скорости</span>
+								</div>
+							</div>
+							<a href="https://api.whatsapp.com/send?phone=77764266044" class="main__header-btn btn">Получить
+								консультацию</a>
+						</div>
+						<div class="main__header-row-right">
+							<div class="main__header-row-right-img">
+								<img src="@img/main/main-img.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__bg">
+					<img src="@img/main/main-bg.png" alt="">
+				</div>
+			</section>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
 </html>

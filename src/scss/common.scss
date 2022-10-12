@@ -1,1 +1,24 @@
 // Заголовки, общие БЄМ блоки и проче...
+.btn {
+	display: inline-flex;
+	background: linear-gradient(90deg, #00718F 0%, #0BA5BE 100%);
+	box-shadow: 10px 10px 47px rgba(11, 165, 190, 0.62);
+	border-radius: 10px;
+	font-weight: 700;
+	font-size: 17px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 23px 35px;
+	transition: all 0.3s ease 0s;
+
+	@media (max-width:$mobile) {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
