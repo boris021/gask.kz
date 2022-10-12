@@ -1,1 +1,2 @@
-npm i del@6.1.1
+gask.kz
+
