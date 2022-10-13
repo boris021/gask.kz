@@ -886,21 +886,80 @@
 }
 
 //========================================================================================================================================================
-.custom-btn {
-	width: 130px;
-	height: 40px;
-	color: #fff;
-	border-radius: 5px;
-	padding: 10px 25px;
-	font-family: 'Lato', sans-serif;
-	font-weight: 500;
-	background: transparent;
+$defaultDuration: .3s;
+$primaryColour: #ececec;
+$secondaryColour: #666;
+$shadowColour: rgba(0, 0, 0, .6);
+
+
+
+// As is often the case, some devices/browsers need additional code to get CSS to work
+// in the most desired way. These mixins are used to quickly drop in hacks for each element
+@mixin hideTapHighlightColor() {
+	//Prevent highlight colour when element is tapped
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@mixin hardwareAccel() {
+	//Improve performance on mobile/tablet devices
+	transform: translateZ(0);
+}
+
+@mixin improveAntiAlias() {
+	//Improve aliasing on mobile/tablet devices
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+
+
+/* Default styles for the demo buttons */
+.button {
+	margin: .4em;
+	padding: 1em;
 	cursor: pointer;
-	transition: all 0.3s ease;
-	position: relative;
+	background: $primaryColour;
+	text-decoration: none;
+	color: $secondaryColour;
+}
+
+/* Wobble Horizontal */
+@keyframes wobble-horizontal {
+	16.65% {
+		transform: translateX(8px);
+	}
+
+	33.3% {
+		transform: translateX(-6px);
+	}
+
+	49.95% {
+		transform: translateX(4px);
+	}
+
+	66.6% {
+		transform: translateX(-2px);
+	}
+
+	83.25% {
+		transform: translateX(1px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.wobble-horizontal {
 	display: inline-block;
-	box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-		7px 7px 20px 0px rgba(0, 0, 0, .1),
-		4px 4px 5px 0px rgba(0, 0, 0, .1);
-	outline: none;
+
+	@include hideTapHighlightColor();
+	@include hardwareAccel();
+	@include improveAntiAlias();
+
+	&:hover {
+		animation-name: wobble-horizontal;
+		animation-duration: 1s;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: 1;
+	}
 }
