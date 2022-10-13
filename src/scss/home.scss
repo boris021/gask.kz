@@ -682,14 +682,6 @@
 	@include adaptiveValue("padding-top", 100, 40);
 	@include adaptiveValue("padding-bottom", 100, 40);
 
-	&__container {}
-
-	&__title {}
-
-	&__slider {}
-
-	&__wrapper {}
-
 	&__slide {
 		position: relative;
 	}
@@ -715,15 +707,10 @@
 	}
 }
 
-.tile {}
 
 .swiper {
 	overflow: visible !important;
 }
-
-.swiper-wrapper {}
-
-.swiper-slide {}
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -773,4 +760,116 @@
 
 .swiper-pagination-bullet-active {
 	background: $blueColor !important;
+}
+
+//========================================================================================================================================================
+.work {
+	position: relative;
+	@include adaptiveValue("padding-top", 100, 40);
+	@include adaptiveValue("padding-bottom", 100, 40);
+
+	&__row {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		border-radius: 20px;
+		filter: drop-shadow(0px 4px 30px rgba(0, 113, 143, 0.71));
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			border-radius: 20px;
+			background: url(../img/work/work-bg.png) center center/cover no-repeat;
+			z-index: -1;
+			object-fit: cover;
+		}
+
+	}
+
+	&__left {
+		flex: 0 1 40%;
+	}
+
+	&__left-img {
+		width: 578px;
+		height: 519px;
+
+		@media (max-width:$tablet) {
+			display: none;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__right {
+		flex: 0 1 55%;
+		padding: 30px;
+
+		@media (max-width:$tablet) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__right-title {
+		position: relative;
+		font-weight: 700;
+		@include adaptiveValue("font-size", 35, 28);
+		line-height: math.div(43, 35);
+		margin-bottom: 30px;
+	}
+
+	&__right-list {}
+
+	&__right-list-item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 15px;
+
+		span {
+			font-weight: 700;
+			@include adaptiveValue("font-size", 16, 14);
+			line-height: math.div(20, 16);
+		}
+
+		img {
+			margin-right: 10px;
+		}
+	}
+
+	&__right-form {
+		margin-top: 50px;
+	}
+
+	&__right-input {
+		background: #D9D9D9;
+		border-radius: 10px;
+		padding: 20px 30px;
+		font-weight: 700;
+		font-size: 16px;
+		@include adaptiveValue("font-size", 16, 14);
+		color: rgba(0, 0, 0, 0.36);
+		margin-right: 40px;
+		height: 60px;
+
+		@media (max-width:$tablet) {
+			margin-bottom: 20px;
+			width: 100%;
+		}
+	}
+
+	&__right-form-button {
+		display: inline-flex;
+		display: block;
+		display: flex;
+		padding: 20px 30px;
+	}
 }
