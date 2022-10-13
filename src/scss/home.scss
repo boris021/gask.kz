@@ -631,8 +631,6 @@
 		left: 0;
 		transform: translateY(-144px);
 
-
-
 		img {
 			width: 100%;
 		}
@@ -677,6 +675,102 @@
 	&__right-btn {
 		padding: 20px 70px;
 	}
+}
 
+// record ========================================================================================================================================================
+.record {
+	@include adaptiveValue("padding-top", 100, 40);
+	@include adaptiveValue("padding-bottom", 100, 40);
 
+	&__container {}
+
+	&__title {}
+
+	&__slider {}
+
+	&__wrapper {}
+
+	&__slide {
+		position: relative;
+	}
+
+	&__slide-img {
+		width: 392px;
+		height: 294px;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 392px;
+			height: 294px;
+			top: 0;
+			left: 0;
+			background: url(../img/record/record-ramka.png) no-repeat;
+		}
+	}
+}
+
+.tile {}
+
+.swiper {
+	overflow: visible !important;
+}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.swiper-button-prev,
+.swiper-button-next {
+	display: block;
+
+	@media (max-width:$mobile) {
+		display: none !important;
+	}
+}
+
+.swiper-button-prev {
+	width: 40px !important;
+	height: 40px !important;
+	background: #0BA5BE;
+	border-radius: 50%;
+	left: -50px !important;
+	top: 50% !important;
+
+	&:after {
+		font-size: 16px !important;
+		color: #fff;
+	}
+}
+
+.swiper-button-next {
+	width: 40px !important;
+	height: 40px !important;
+	background: #0BA5BE;
+	border-radius: 50%;
+	right: -40px !important;
+	top: 50% !important;
+
+	&:after {
+		font-size: 16px !important;
+		color: #fff;
+	}
+}
+
+.swiper-pagination {
+	display: none;
+
+	@media (max-width:$mobile) {
+		display: block;
+		bottom: -30px !important;
+	}
+}
+
+.swiper-pagination-bullet-active {
+	background: $blueColor !important;
 }
