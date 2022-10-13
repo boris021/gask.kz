@@ -22,3 +22,14 @@
 		opacity: 0.8;
 	}
 }
+
+.title {
+	font-weight: 800;
+	@include adaptiveValue("font-size", 70, 36);
+	line-height: math.div(85, 70);
+	@include adaptiveValue("margin-bottom", 30, 20);
+
+	@media (max-width:$mobile) {
+		text-align: center;
+	}
+}

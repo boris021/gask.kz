@@ -5,6 +5,10 @@
 	position: relative;
 	z-index: 2;
 
+	@media (max-width:$mobile) {
+		padding-bottom: 30px;
+	}
+
 	&::before {
 		content: '';
 		position: absolute;
@@ -110,6 +114,10 @@
 		top: 0;
 		left: 0;
 		transform: translateX(-20%);
+
+		@media (max-width:$tablet) {
+			display: none;
+		}
 
 		img {
 			width: 100%;
@@ -287,6 +295,7 @@
 .main {
 
 	&__item {
+		padding: 50px 70px;
 		display: flex;
 		flex: 0 1 auto;
 		margin: 0 10%;
@@ -302,9 +311,10 @@
 		position: relative;
 
 		@media (max-width:$tablet) {
+			margin: 0 5%;
 			transform: translateY(0px);
 			justify-content: center;
-			margin: 0;
+			// margin: 0;
 			margin-top: 50px;
 		}
 	}
@@ -315,11 +325,14 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		padding: 50px 70px;
 
 		@media (max-width:$mobile) {
-			padding: 30px;
 			flex: 1 1 100%;
+			margin-bottom: 30px;
+
+			&:last-child {
+				margin-bottom: 0px;
+			}
 		}
 
 		img {
@@ -340,4 +353,330 @@
 	}
 }
 
-//====================================================================================================
+// service ====================================================================================================
+.service {
+	margin-top: -200px;
+	background: rgba(230, 223, 218, 0.54);
+	position: relative;
+	@include adaptiveValue("padding-top", 104, 40);
+	@include adaptiveValue("padding-bottom", 170, 40);
+
+	&:after {
+		content: '';
+		position: absolute;
+		width: 500px;
+		height: 500px;
+		top: -130px;
+		right: 0;
+		background: url(../img/service/service-afаter.png) no-repeat;
+		z-index: -1;
+	}
+
+	@media (max-width:$tablet) {
+		margin-top: 40px;
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__card {
+		position: relative;
+		flex: 0 1 32%;
+		display: flex;
+		align-items: center;
+		// flex-wrap: wrap;
+		background: #FFFFFF;
+		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+		border-radius: 10px;
+		margin-bottom: 30px;
+		transition: all 0.3s ease 0s;
+
+		&-new {
+			position: relative;
+
+			@media (max-width:$tablet) {
+				display: none;
+			}
+		}
+
+		&:hover {
+			box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.35);
+			transform: translateY(-5px);
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+
+		}
+
+		@media (max-width:$tablet) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__card-left {
+		@media (max-width:$mobile) {
+			width: 100%;
+		}
+	}
+
+	&__card-left-img {
+		@media (max-width:$mobile) {
+			width: 100%;
+			object-fit: cover;
+		}
+
+		img {
+			border-radius: 10px;
+
+			@media (max-width:$mobile) {
+				opacity: 0.4;
+			}
+		}
+	}
+
+	&__card-right {
+		@media (max-width:$mobile) {
+			position: absolute;
+			width: 100%;
+			// height: 100%;
+			bottom: 0%;
+			left: 0;
+			// transform: translateY(-25%);
+		}
+	}
+
+	&__card-right-content {
+		margin: 15px;
+	}
+
+	&__card-right-content-title {
+		font-weight: 800;
+		@include adaptiveValue("font-size", 18, 16);
+		line-height: math.div(24, 20);
+		@include adaptiveValue("padding-bottom", 25, 15);
+
+		@media (max-width:$mobile) {
+			text-align: center;
+		}
+	}
+
+	&__card-right-content-line {
+		width: 100%;
+		height: 3px;
+		background-color: #0BA5BE;
+		@include adaptiveValue("margin-bottom", 30, 15);
+	}
+
+	&__card-right-content-btn {
+		padding: 16px 25px;
+		font-weight: 600;
+		text-align: center;
+		letter-spacing: 0.5px;
+		font-size: 13px;
+		line-height: math.div(16, 13);
+		color: #FFFFFF;
+
+	}
+
+	&__card-img-new {
+		position: absolute;
+		top: -160px;
+		left: 0;
+
+		@media (max-width:$mobile) {
+			display: none;
+		}
+	}
+}
+
+// about ========================================================================================================================================================
+.about {
+	@include adaptiveValue("padding-top", 104, 40);
+	@include adaptiveValue("padding-bottom", 220, 40);
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 702.19px;
+		height: 100%;
+		top: -20%;
+		left: 0;
+		background: url(../img/about/about-beffore.png) no-repeat;
+		z-index: -1;
+
+		@media (max-width:$tablet) {
+			filter: blur(50px);
+		}
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 800px;
+		height: 751px;
+		top: 0%;
+		right: -514px;
+		background: url(../img/about/about-affter.png) no-repeat;
+		z-index: -1;
+
+		@media (max-width:$tablet) {
+			filter: blur(50px);
+		}
+	}
+
+	&__row {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__left {
+		flex: 0 1 48%;
+
+		@media (max-width:$tablet) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__left-text {
+		font-weight: 500;
+		@include adaptiveValue("font-size", 16, 14);
+		line-height: math.div(20, 16);
+
+		p {
+			margin-bottom: 20px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__right {
+		flex: 0 1 48%;
+
+		@media (max-width:$tablet) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__right-img {
+		max-width: 690px;
+		transition: filter 0.3s ease 0s;
+
+		&:hover {
+			filter: saturate(50%);
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			z-index: 1;
+		}
+	}
+}
+
+//========================================================================================================================================================
+
+.special {
+	position: relative;
+
+	@media (max-width:$tablet) {
+		padding: 40px 0;
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__left {
+		flex: 0 1 48%;
+		height: 426px;
+		position: relative;
+
+		@media (max-width:$tablet) {
+			display: none;
+		}
+	}
+
+	&__left-img {
+		position: absolute;
+		width: 680px;
+		height: 569px;
+		top: 0;
+		left: 0;
+		transform: translateY(-144px);
+
+
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__right {
+		flex: 0 1 48%;
+
+		@media (max-width:$tablet) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__right-subtitle {
+		font-weight: 800;
+		@include adaptiveValue("font-size", 30, 26);
+		line-height: math.div(37, 30);
+		text-transform: uppercase;
+		margin-bottom: 5px;
+
+		@media (max-width:$tablet) {
+			text-align: center;
+		}
+	}
+
+	&__right-title {
+		@include adaptiveValue("font-size", 50, 32);
+		line-height: math.div(61, 50);
+	}
+
+	&__right-text {
+		font-weight: 800;
+		@include adaptiveValue("font-size", 30, 24);
+		line-height: math.div(37, 30);
+		margin-bottom: 25px;
+
+		@media (max-width:$tablet) {
+			text-align: center;
+		}
+	}
+
+	&__right-btn {
+		padding: 20px 70px;
+	}
+
+
+}
