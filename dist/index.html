@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221013152526">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221013194155">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +28,6 @@
 			</div>
 		</header>
 		<main class="page">
-
 			<section class="main">
 				<div class="main__container">
 					<div class="main__header-top">
@@ -36,10 +35,10 @@
 							<button type="button" class="menu__icon icon-menu"><span></span></button>
 							<nav class="menu__body">
 								<ul class="menu__list">
-									<li class="menu__item"><a href="" class="menu__link">Главная</a></li>
-									<li class="menu__item"><a href="" class="menu__link">Услуги</a></li>
-									<li class="menu__item"><a href="" class="menu__link">О нас</a></li>
-									<li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+									<li class="menu__item"><a data-goto=".main" href="#" class="menu__link">Главная</a></li>
+									<li class="menu__item"><a data-goto=".service" href="#" class="menu__link">Услуги</a></li>
+									<li class="menu__item"><a data-goto=".about" href="#" class="menu__link">О нас</a></li>
+									<li class="menu__item"><a data-goto=".footer" href="#" class="menu__link">Контакты</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -53,10 +52,12 @@
 					</div>
 					<div class="main__header-row">
 						<div class="main__header-row-left">
-							<div class="main__header-title">Узаконение недвижимости и решение земельных вопросов <span>в
+							<div class="main__header-title element-animation">Узаконение недвижимости и решение земельных
+								вопросов <span>в
 									Алматы</span>
 							</div>
-							<div class="main__header-subtitle">Возьмем на себя Ваши заботы и решим их в срок!</div>
+							<div class="main__header-subtitle element-animation">Возьмем на себя Ваши заботы и решим их в срок!
+							</div>
 							<div class="main__header-list">
 								<div class="main__header-list-item">
 									<img src="img/main/icons/main-icon-1.png" alt="">
@@ -67,6 +68,7 @@
 									<span>Приоритет качества и скорости</span>
 								</div>
 							</div>
+
 							<a href="https://api.whatsapp.com/send?phone=77764266044" class="main__header-btn btn">Получить
 								консультацию</a>
 						</div>
@@ -104,7 +106,7 @@
 			<section class="service">
 				<div class="service__container">
 					<h2 class="service__title title">Наши услуги</h2>
-					<div class="service__row">
+					<div class="service__row element-animation">
 						<div class="service__card">
 							<div class="service__card-left">
 								<div class="service__card-left-img">
@@ -185,7 +187,7 @@
 				</div>
 			</section>
 
-			<section class="about">
+			<section class="about element-animation">
 				<div class="about__container">
 					<div class="about__row">
 						<div class="about__left">
@@ -318,8 +320,10 @@
 								</div>
 							</div>
 							<div class="work__right-form">
-								<input autocomplete="on" type="tel" name="tel" data-error="Ошибка" placeholder="Ваш номер телефона" class="work__right-input">
-								<button type="submit" class="work__right-form-button btn">Вызвать специалиста</button>
+								<form data-ajax data-popup-message="#form-message" action="sendmail.php" method="POST">
+									<input autocomplete="on" type="tel" name="tel" data-error="Ошибка" placeholder="Ваш номер телефона" class="work__right-input tel">
+									<button type="submit" class="work__right-form-button btn">Вызвать специалиста</button>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -364,20 +368,20 @@
 			</a>
 		</div>
 	</div>
-	<!-- 
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
+	<div id="form-message" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__text">
+					<div class="popup__text-title">Спасибо за вашу заявку!</div>
+					<div class="popup__text-subtitle">В ближайшие время с вами свяжется специалист компании,
+						который проконсультирует вас по всем вопросам.</div>
+				</div>
+				<button data-close type="button" class="popup__close-btn">Закрыть</button>
 			</div>
 		</div>
 	</div>
-</div>
- -->
-
-	<script src="js/app.min.js?_v=20221013152526"></script>
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css?_v=20221013152526">
+	<script src="js/app.min.js?_v=20221013194155"></script>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css?_v=20221013194155">
 
 
 	<script>
@@ -419,6 +423,26 @@
 			});
 
 		});
+	</script>
+
+	<script>
+		function onEntry(entry) {
+			entry.forEach(change => {
+				if (change.isIntersecting) {
+					change.target.classList.add('element-show');
+				}
+			});
+		}
+
+		let options = {
+			threshold: [0.5]
+		};
+		let observer = new IntersectionObserver(onEntry, options);
+		let elements = document.querySelectorAll('.element-animation');
+
+		for (let elm of elements) {
+			observer.observe(elm);
+		}
 	</script>
 </body>
 
