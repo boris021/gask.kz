@@ -1234,6 +1234,10 @@ body::after {
   }
 }
 
+.service-mobile {
+  display: none;
+}
+
 .no-webp .service:after{
   background: url(../img/service/service-afаter.png) no-repeat; }
 
@@ -2856,12 +2860,6 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
-@media (max-width: 90em) {
-  .service-mobile {
-    display: none;
-  }
-}
-
 @media (max-width: 61.99875em) {
   .main__header-row-right {
     -webkit-box-flex: 1;
@@ -2922,10 +2920,6 @@ button.swiper-pagination-bullet {
         -ms-flex-pack: center;
             justify-content: center;
     margin-top: 50px;
-  }
-
-  .service-mobile {
-    display: none;
   }
 
   .service {
@@ -3155,6 +3149,7 @@ button.swiper-pagination-bullet {
 
   .service-mobile {
     display: block;
+    margin-top: 60px;
   }
 
   .service__card {

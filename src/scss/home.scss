@@ -369,16 +369,11 @@
 
 
 	&-mobile {
-		@media (max-width:$pc) {
-			display: none;
-		}
-
-		@media (max-width:$tablet) {
-			display: none;
-		}
+		display: none;
 
 		@media (max-width:$mobile) {
 			display: block;
+			margin-top: 60px;
 		}
 	}
 
