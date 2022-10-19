@@ -9,43 +9,38 @@
 		@@include('html/_header.htm',{})
 		<main class="page">
 			<section class="main">
+				<div class="main__bef">
+					<img src="@img/main/main-after.png" alt="">
+				</div>
 				<div class="main__container">
-					<div class="main__header-top">
-						<div class="header__menu menu">
-							<button type="button" class="menu__icon icon-menu"><span></span></button>
-							<nav class="menu__body">
-								<ul class="menu__list">
-									<li class="menu__item"><a data-goto=".main" href="#" class="menu__link">Главная</a></li>
-									<li class="menu__item"><a data-goto=".service" href="#" class="menu__link">Услуги</a></li>
-									<li class="menu__item"><a data-goto=".about" href="#" class="menu__link">О нас</a></li>
-									<li class="menu__item"><a data-goto=".footer" href="#" class="menu__link">Контакты</a></li>
-								</ul>
-							</nav>
-						</div>
-						<div class="main__header-social">
-							<a class="main__header-social-link" href="https://api.whatsapp.com/send?phone=77764266044"><img
-									src="@img/main/whatsapp.png" alt=""></a>
-							<a class="main__header-social-link" href="tel:+77764266044"><img src="@img/main/telephone.png"
-									alt=""></a></div>
-						<div class="main__header-tel">
-							<a href="tel:+77764266044">+7 776 426 60 44</a>
-						</div>
-					</div>
+
 					<div class="main__header-row">
 						<div class="main__header-row-left">
-							<div class="main__header-title"> Узаконение недвижимости и решение
-								земельных
-								вопросов <span>в Алматы</span>
+							<div class="main__header-title">
+								<p class="text-type"> Узаконение недвижимости </p>
+								<p class="text-type">и решение земельных</p>
+								<p class="text-type">вопросов <span>в Алматы</span></p>
 							</div>
-							<div class="main__header-subtitle">Возьмем на себя Ваши заботы и решим их в срок!
+							<div class="main__header-subtitle">Возьмем на себя Ваши заботы и
+								решим их в срок!
 							</div>
 							<div class="main__header-list">
 								<div class="main__header-list-item">
-									<img src="@img/main/icons/main-icon-1.png" alt="">
+									<!-- <img src="@img/main/icons/main-icon-1.png" alt="">
+									 -->
+									<div class="main__header-list-item-icon">
+										<lottie-player src="https://assets6.lottiefiles.com/packages/lf20_qgscxovc.json"
+											background="transparent" speed="1" loop autoplay></lottie-player>
+									</div>
+
 									<span>Полное сопровождение на всех этапах</span>
 								</div>
 								<div class="main__header-list-item">
-									<img src="@img/main/icons/main-icon-2.png" alt="">
+									<!-- <img src="@img/main/icons/main-icon-2.png" alt=""> -->
+									<div class="main__header-list-item-icon">
+										<lottie-player src="https://assets3.lottiefiles.com/private_files/lf30_u4mgmpw4.json"
+											background="transparent" speed="1" loop autoplay></lottie-player>
+									</div>
 									<span>Приоритет качества и скорости</span>
 								</div>
 							</div>
@@ -70,24 +65,41 @@
 				<div class="cnt__container">
 					<div class="main__item">
 						<div class="main__item-card">
-							<img src="@img/main/icons/main-icon-3.png" alt="">
+							<!-- <img src="@img/main/icons/main-icon-3.png" alt=""> -->
+							<div class="main__item-card-icon">
+								<lottie-player src="https://assets9.lottiefiles.com/private_files/lf30_wbszjekz.json"
+									background="transparent" speed="1" loop autoplay></lottie-player>
+							</div>
 							<span>Бесплатная консультация с выездом</span>
 						</div>
 						<div class="main__item-card">
-							<img src="@img/main/icons/main-icon-4.png" alt="">
+							<div class="main__item-card-icon">
+								<!-- <img src="@img/main/icons/main-icon-4.png" alt=""> -->
+								<lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_y1hMez.json"
+									background="transparent" speed="1" loop autoplay></lottie-player>
+							</div>
 							<span>Предоставление графика отчетности на всех этапах работ</span>
 						</div>
 						<div class="main__item-card">
-							<img src="@img/main/icons/main-icon-5.png" alt="">
+							<!-- <img src="@img/main/icons/main-icon-5.png" alt=""> -->
+							<div class="main__item-card-icon">
+								<lottie-player src="https://assets10.lottiefiles.com/packages/lf20_bmqwuqs8.json"
+									background="transparent" speed="1" loop autoplay></lottie-player>
+							</div>
 							<span>Ответственность наших юристов застрахована</span>
 						</div>
 					</div>
 				</div>
 			</section>
 
+			<section class="service"></section>
+
 			<section class="service service-pc">
 				<div class="service__container">
-					<h2 class="service__title title">Наши услуги</h2>
+					<h2 class="service__title title">
+						<p class="text-type"> Наши услуги </p>
+
+					</h2>
 					<div class="service__row element-animation">
 						<div class="service__card">
 							<div class="service__card-left">
@@ -176,7 +188,9 @@
 
 			<section class="service-mobile">
 				<div class="service__container">
-					<h2 class="service__title title">Наши услуги</h2>
+					<h2 class="service__title title">
+						<p class="text-type"> Наши услуги</p>
+					</h2>
 					<div class="service__row">
 						<div class="service__card">
 							<div class="service__card-left">
@@ -262,7 +276,9 @@
 				<div class="about__container">
 					<div class="about__row">
 						<div class="about__left">
-							<h2 class="about__left-title title">О нас</h2>
+							<h2 class="about__left-title title">
+								<p class="text-type">О нас</p>
+							</h2>
 							<div class="about__left-text">
 								<p>Мы - группа компаний, специализирующаяся на оформлении прав и документов в отношении
 									узаконения недвижимости и решения земельных вопросов по г. Алматы.
@@ -302,7 +318,9 @@
 					</div>
 					<div class="special__right">
 						<div class="special__right-subtitle">Нужна ПОМОЩЬ</div>
-						<h2 class="special__right-title title">СПЕЦИАЛИСТА?</h2>
+						<h2 class="special__right-title title">
+							<p class="text-type">СПЕЦИАЛИСТА?</p>
+						</h2>
 						<div class="special__right-text">Оставьте заявку и получите бесплатную консультацию с выездом в
 							течении <span>60 минут</span> по всем интересующим Вас вопросам уже сегодня.</div>
 						<a href="https://api.whatsapp.com/send?phone=77764266044"

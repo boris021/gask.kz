@@ -4,28 +4,35 @@
 	position: relative;
 	height: 415px;
 	display: flex;
+	width: 100%;
 	align-items: center;
 
-	&__row {
-		display: flex;
-		align-items: center;
+	&__container {
+		display: grid;
+		grid-template-columns: 1fr 2.5fr;
+
+		@media (max-width:$tablet) {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__left {
-		max-width: 481px;
 		background: rgba(255, 255, 255, 0.8);
 		border-radius: 20px;
 		padding: 46px 60px;
 
 		@media (max-width:$mobile) {
 			padding: 20px;
+			background: rgba(255, 255, 255, 1);
 		}
 	}
+
 
 	&__maps {
 		font-weight: 500;
 		font-size: 17px;
 		@include adaptiveValue("margin-bottom", 30, 15);
+		line-height: 120%;
 	}
 
 	&__phone {
