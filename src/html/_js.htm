@@ -1,4 +1,7 @@
 <script src="js/app.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"
+	integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg=="
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
@@ -78,4 +81,14 @@
 			document.body.classList.remove('loaded_hiding');
 		}, 500);
 	}
+</script>
+
+<script>
+	// Here, the ease animation will be use for the global drawing.
+	new Vivus(
+		'mysvg1', {
+			type: 'sync',
+			duration: 200,
+		},
+	);
 </script>

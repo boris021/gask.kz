@@ -970,9 +970,6 @@ body::after {
   max-width: 100%;
 }
 
-.no-webp .main::after{
-  background: url(../img/main/main-beffore.png) no-repeat; }
-
 .main::after {
   content: "";
   position: absolute;
@@ -980,6 +977,7 @@ body::after {
   height: 100%;
   top: 50px;
   right: -80px;
+  background: url(../img/main/main-beffore.png) no-repeat;
   z-index: 1;
 }
 
@@ -1187,6 +1185,7 @@ body::after {
 
 .main__header-list-item-icon {
   max-width: 100px;
+  margin-right: 12px;
 }
 
 .main__header-list-item:last-child {
@@ -1371,9 +1370,6 @@ body::after {
   display: none;
 }
 
-.no-webp .service:after{
-  background: url(../img/service/service-afаter.png) no-repeat; }
-
 .service:after {
   content: "";
   position: absolute;
@@ -1381,6 +1377,7 @@ body::after {
   height: 500px;
   top: -130px;
   right: 0;
+  background: url(../img/service/service-afаter.png) no-repeat;
   z-index: -1;
 }
 
@@ -1534,9 +1531,6 @@ body::after {
   }
 }
 
-.no-webp .about::before{
-  background: url(../img/about/about-beffore.png) no-repeat; }
-
 .about::before {
   content: "";
   position: absolute;
@@ -1544,11 +1538,9 @@ body::after {
   height: 100%;
   top: -20%;
   left: 0;
+  background: url(../img/about/about-beffore.png) no-repeat;
   z-index: -1;
 }
-
-.no-webp .about::after{
-  background: url(../img/about/about-affter.png) no-repeat; }
 
 .about::after {
   content: "";
@@ -1557,6 +1549,7 @@ body::after {
   height: 751px;
   top: 0%;
   right: -514px;
+  background: url(../img/about/about-affter.png) no-repeat;
   z-index: -1;
 }
 
@@ -1788,9 +1781,6 @@ body::after {
   padding: 27px;
 }
 
-.no-webp .record__slide-img::before{
-  background: url(../img/record/record-ramka.png) no-repeat; }
-
 .record__slide-img::before {
   content: "";
   position: absolute;
@@ -1798,6 +1788,7 @@ body::after {
   height: 294px;
   top: 0;
   left: 0;
+  background: url(../img/record/record-ramka.png) no-repeat;
 }
 
 .swiper {
@@ -1891,9 +1882,6 @@ body::after {
           filter: drop-shadow(0px 4px 30px rgba(0, 113, 143, 0.71));
 }
 
-.no-webp .work__row::before{
-  background: url(../img/work/work-bg.png) center center/cover no-repeat; }
-
 .work__row::before {
   content: "";
   position: absolute;
@@ -1902,6 +1890,7 @@ body::after {
   top: 0;
   left: 0;
   border-radius: 20px;
+  background: url(../img/work/work-bg.png) center center/cover no-repeat;
   z-index: -1;
   -o-object-fit: cover;
      object-fit: cover;
@@ -3372,15 +3361,3 @@ button.swiper-pagination-bullet {
     bottom: -30px !important;
   }
 }
-
-.webp .main::after{ background: url(../img/main/main-beffore.webp) no-repeat; }
-
-.webp .service:after{ background: url(../img/service/service-afаter.webp) no-repeat; }
-
-.webp .about::before{ background: url(../img/about/about-beffore.webp) no-repeat; }
-
-.webp .about::after{ background: url(../img/about/about-affter.webp) no-repeat; }
-
-.webp .record__slide-img::before{ background: url(../img/record/record-ramka.webp) no-repeat; }
-
-.webp .work__row::before{ background: url(../img/work/work-bg.webp) center center/cover no-repeat; }
