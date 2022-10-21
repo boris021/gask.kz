@@ -1287,7 +1287,9 @@ body::after {
 
 .main__item-card-icon {
   width: 170px;
-  height: 170px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 8px;
 }
 
 .main__item-card img {
@@ -1395,6 +1397,29 @@ body::after {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+.service__card:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 10px;
+  bottom: 0;
+  left: 0;
+  background-color: #013f4e;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -webkit-transition: width 0.8s ease 0s;
+  -o-transition: width 0.8s ease 0s;
+  transition: width 0.8s ease 0s;
+}
+
+.service__card:last-child:before {
+  height: 0px;
+}
+
+.service__card:hover:before {
+  width: 100%;
 }
 
 .service__card-new {
