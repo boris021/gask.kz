@@ -576,6 +576,49 @@ body::after {
   display: none;
 }
 
+.buttonbl {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.buttonbl .flare {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 45px;
+  -webkit-transform: skewX(-45deg);
+      -ms-transform: skewX(-45deg);
+          transform: skewX(-45deg);
+  -webkit-animation: flareAnimation;
+          animation: flareAnimation;
+  left: -150%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.4)));
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+  -webkit-animation: flareAnimation 3s infinite linear;
+          animation: flareAnimation 3s infinite linear;
+}
+
+@-webkit-keyframes flareAnimation {
+  0% {
+    left: -150%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
+
+@keyframes flareAnimation {
+  0% {
+    left: -150%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -1010,6 +1053,7 @@ body::after {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  z-index: 10;
 }
 
 @supports (font-size: clamp( 1.125rem , 1.0892857143rem  +  0.1785714286vw , 1.25rem )) {
@@ -1494,10 +1538,9 @@ body::after {
 }
 
 .service__card-right-content-btn {
-  padding: 16px 25px;
+  padding: 16px 20px;
   font-weight: 600;
   text-align: center;
-  letter-spacing: 0.5px;
   font-size: 13px;
   line-height: 1.2307692308;
   color: #FFFFFF;
